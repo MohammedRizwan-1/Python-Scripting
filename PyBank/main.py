@@ -46,6 +46,21 @@ with open(budget_csv, 'r') as csvfile:
     print("Average Change: $", round((average_revenue_change),2))
     print("Greatest Increase in Revenue :", max_prof_loss_change_date, "($",int(max_prof_loss_change),")")
     print("Greatest Decrease in Revenue :", min_prof_loss_change_date, "($",int(min_prof_loss_change),")")
+
+    #Output File as Text File 
+
+    output_file = os.path.join('PyBank', 'Analysis', "Analysis.txt")
+    with open(output_file, "w") as text_file:
+         text_file.write (f"Financial Analysis\n")
+         text_file.write (f"-------------------------------\n")
+         text_file.write (f"Total Months: " + str(len(date)) + "\n")
+         text_file.write (f"Total Revenue: " + str(int((sum(prof_loss)))) + "\n")
+         text_file.write (f"Average Change:" + str(round((average_revenue_change),2)) + "\n")
+         text_file.write (f"Greatest Increase in Revenue:" + str(" ") + str( max_prof_loss_change_date) + (" ")  + str("$") + str(int(max_prof_loss_change)) + "\n")
+         text_file.write (f"Greatest Increase in Revenue:" + str(" ") + str( min_prof_loss_change_date) + (" ")  + str("$") + str(int(min_prof_loss_change)) + "\n")
+
+
+        
     
 
 
