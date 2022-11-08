@@ -45,6 +45,7 @@ with open(budget_csv, 'r') as csvfile:
     print("Total Revenue: $", int((sum(prof_loss))))
     print("Average Change: $", round((average_revenue_change),2))
     print("Greatest Increase in Revenue :", max_prof_loss_change_date, "($",int(max_prof_loss_change),")")
+    
     print("Greatest Decrease in Revenue :", min_prof_loss_change_date, "($",int(min_prof_loss_change),")")
 
     #Output File as Text File 
