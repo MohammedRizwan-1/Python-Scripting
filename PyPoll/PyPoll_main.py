@@ -56,6 +56,7 @@ with open(output_file_path, "w") as text_file:
             f"---------------------\n"
             f"Total Votes: {Total_Votes}\n"
             f"---------------------\n")
+    
     print(Election_Results)
     #   Save to text file 
     text_file.write(Election_Results)
